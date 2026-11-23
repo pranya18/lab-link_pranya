@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLink | AI Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⚗ LabLink</div>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="booking.html">Booking</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+    </nav>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<main class="dashboard">
+
+    <div class="ai-container">
+
+        <div class="ai-heading">
+            <div class="ai-icon">🤖</div>
+            <h1>LabLink AI Assistant</h1>
+            <p>Your intelligent laboratory resource assistant.</p>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <div class="bot-message">
+                Hello! I'm your LabLink AI assistant.
+                Tell me about your project, and I'll help
+                you identify the equipment you need.
+            </div>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+            <input type="text" id="chatInput"
+                placeholder="Describe your project..."
+                required>
+
+            <button type="submit" class="primary-btn">
+                Send
+            </button>
+        </form>
+
+        <p class="ai-note">
+            AI suggestions will be connected to the
+            backend API in the integration stage.
+        </p>
+
+    </div>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

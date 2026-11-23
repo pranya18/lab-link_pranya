@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLink | Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⚗ LabLink</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="booking.html">My Bookings</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+    </nav>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<main class="dashboard">
+
+    <div class="welcome">
+        <div>
+            <h1>Student Dashboard</h1>
+            <p>Welcome back! Explore your campus resources.</p>
+        </div>
+
+        <a href="equipment.html" class="primary-btn">
+            + Find Equipment
+        </a>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <span>📦</span>
+            <h2 id="totalEquipment">0</h2>
+            <p>Total Equipment</p>
+        </div>
+
+        <div class="stat-card">
+            <span>📅</span>
+            <h2 id="myBookings">0</h2>
+            <p>My Bookings</p>
+        </div>
+
+        <div class="stat-card">
+            <span>⏳</span>
+            <h2 id="pendingRequests">0</h2>
+            <p>Pending Requests</p>
+        </div>
+
+        <div class="stat-card">
+            <span>✅</span>
+            <h2 id="approvedRequests">0</h2>
+            <p>Approved Requests</p>
+        </div>
+
+    </div>
+
+    <section class="dashboard-section">
+        <div class="section-heading">
+            <h2>Quick Actions</h2>
+        </div>
+
+        <div class="quick-grid">
+
+            <a href="equipment.html" class="quick-card">
+                🔍
+                <h3>Find Equipment</h3>
+                <p>Discover laboratory resources.</p>
+            </a>
+
+            <a href="booking.html" class="quick-card">
+                📅
+                <h3>Book Equipment</h3>
+                <p>Request equipment for projects.</p>
+            </a>
+
+            <a href="ai-assistant.html" class="quick-card">
+                🤖
+                <h3>AI Assistant</h3>
+                <p>Get project recommendations.</p>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="dashboard-section">
+        <h2>Recent Bookings</h2>
+
+        <div id="recentBookings" class="table-container">
+            No bookings yet.
+        </div>
+    </section>
+
+</main>
+<script src="js/main.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLink | Equipment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⚗ LabLink</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="booking.html">Booking</a>
+        <a href="ai-assistant.html">AI Assistant</a>
+    </nav>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<main class="dashboard">
+
+    <h1>Explore Laboratory Equipment</h1>
+    <p>Find equipment available across departments.</p>
+
+    <div class="search-area">
+
+        <input type="text" id="searchInput"
+            placeholder="Search Arduino, Raspberry Pi, sensors...">
+
+        <select id="departmentFilter">
+            <option value="">All Departments</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">Mechanical</option>
+        </select>
+
+        <select id="availabilityFilter">
+            <option value="">All Status</option>
+            <option value="Available">Available</option>
+            <option value="Booked">Booked</option>
+        </select>
+
+    </div>
+
+    <div id="equipmentList" class="equipment-grid"></div>
+
+</main>
+<script src="js/main.js"></script>
+<script src="js/equipment.js"></script>
+</body>
+</html>

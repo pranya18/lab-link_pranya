@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLink | Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⚗ LabLink</div>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="booking.html">Booking</a>
+    </nav>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<main class="dashboard">
+
+    <div class="form-container">
+
+        <h1>Request Laboratory Equipment</h1>
+        <p>Tell us about your project and resource requirements.</p>
+
+        <form id="bookingForm">
+
+            <label>Project Name</label>
+            <input type="text" id="projectName"
+                placeholder="Enter project name" required>
+
+            <label>Project Description</label>
+            <textarea id="projectDescription"
+                placeholder="Describe your project and why you need this equipment"
+                required></textarea>
+
+            <label>Select Equipment</label>
+            <select id="equipmentSelect" required>
+                <option value="">Choose Equipment</option>
+            </select>
+
+            <label>Project Deadline</label>
+            <input type="date" id="deadline" required>
+
+            <label>Booking Date</label>
+            <input type="date" id="bookingDate" required>
+
+            <label>Start Time</label>
+            <select id="startTime" required>
+                <option value="">Choose start time</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+            </select>
+
+            <label>End Time</label>
+            <select id="endTime" required>
+                <option value="">Choose end time</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+            </select>
+
+            <button type="submit" class="primary-btn full-btn">
+                Submit Booking Request
+            </button>
+
+        </form>
+
+        <div id="bookingResult"></div>
+
+    </div>
+
+</main>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

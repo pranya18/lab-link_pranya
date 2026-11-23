@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLink | Faculty Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⚗ LabLink</div>
+
+    <nav>
+        <a href="faculty.html">Requests</a>
+        <a href="equipment.html">Equipment</a>
+    </nav>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<main class="dashboard">
+
+    <h1>Faculty Dashboard</h1>
+    <p>Review and manage student equipment requests.</p>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h2 id="facultyPending">0</h2>
+            <p>Pending Requests</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="facultyApproved">0</h2>
+            <p>Approved Requests</p>
+        </div>
+    </div>
+
+    <section class="dashboard-section">
+        <h2>Student Booking Requests</h2>
+
+        <div id="facultyRequests"></div>
+    </section>
+
+</main>
+<script src="js/main.js"></script>
+<script src="js/faculty.js"></script>
+</body>
+</html>

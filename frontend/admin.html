@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLink | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⚗ LabLink</div>
+    <nav>
+        <a href="admin.html">Admin</a>
+        <a href="equipment.html">Equipment</a>
+    </nav>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<main class="dashboard">
+
+    <h1>Admin Dashboard</h1>
+    <p>Manage campus laboratory resources.</p>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h2 id="adminTotal">0</h2>
+            <p>Total Equipment</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="adminAvailable">0</h2>
+            <p>Available Equipment</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Add New Equipment</h2>
+
+        <form id="equipmentForm">
+
+            <label>Equipment Name</label>
+            <input type="text" id="newEquipment"
+                placeholder="Enter equipment name" required>
+
+            <label>Department</label>
+            <select id="newDepartment" required>
+                <option value="">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">Mechanical</option>
+            </select>
+
+            <label>Quantity</label>
+            <input type="number" id="newQuantity"
+                min="1" required>
+
+            <button type="submit" class="primary-btn full-btn">
+                Add Equipment
+            </button>
+
+        </form>
+    </div>
+
+    <section class="dashboard-section">
+        <h2>Manage Equipment</h2>
+        <div id="adminEquipment"></div>
+    </section>
+
+</main>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
